@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Physionic</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- header-section -->
+      <header class="section-header">
+        <nav class="main-nav">
+          <h3 class="text-logo">Physionic</h3>
+          <ul class="nav-list">
+            <li><a class="nav-item" href="#">Home</a></li>
+            <li><a href="#" class="nav-item">Product</a></li>
+            <li><a href="#" class="nav-item">Pricing</a></li>
+            <li><a href="#" class="nav-item">Contact</a></li>
+            <li id="nav-btn">
+              <a class="nav-item nav-cta" href="#"
+                >Get Quote Now &ThinSpace; &rightarrow;
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hero-section -->
+      <section class="section-hero container">
+        <div class="hero-left-side">
+          <h1 class="heading-primary">Meet the Best Hospital</h1>
+          <p class="sub-heading">
+            We know how large objects will act, but things on a small scale.
+          </p>
+          <div class="hero-btn-block">
+            <a href="#" class="btn btn-fill">Get Quote Now</a>
+            <a href="#" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-right-side">
+          <div class="book-appointment-form">
+            <h3 class="heading-secondary">Book Appointment</h3>
+            <form action="" class="form-block">
+              <div class="name-field">
+                <label for="name">Name &ast;</label>
+                <input
+                  id="Name"
+                  type="text"
+                  placeholder="Full Name &ast;"
+                  required
+                />
+              </div>
+
+              <div class="email-field">
+                <label for="email">Email address &ast;</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="example@gmail.com &ast;"
+                  required
+                />
+              </div>
+
+              <div class="Department-field">
+                <label for="department">Department &ast;</label>
+                <select name="" id="department" required>
+                  <option value="" selected>Pleae Select</option>
+                  <option value="">physiotherapy</option>
+                  <option value="">physiology</option>
+                </select>
+              </div>
+
+              <div class="time-field">
+                <label for="time">Time &ast;</label>
+                <select name="" id="time" required>
+                  <option value="" selected>4:00 Available</option>
+                  <option value="">5:30 Available</option>
+                  <option value="">6:30 Available</option>
+                </select>
+              </div>
+              <button class="btn btn-form-submit">Book Appointment</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

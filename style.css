@@ -53,8 +53,8 @@ body {
 
 /* Header section */
 
-.main-container {
-  height: 80vh;
+.header-container {
+  /* height: 80vh; */
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -188,10 +188,6 @@ body {
   border-radius: 5px;
 }
 
-.book-appointment-form select option {
-  color: ;
-}
-
 .book-appointment-form input::placeholder,
 .book-appointment-form select option {
   color: #737373;
@@ -202,6 +198,83 @@ body {
   border-radius: 5px;
   margin-top: 4rem;
   padding: 1.5rem 5.2rem;
+}
+
+/* Medical-secion */
+.medical-detail {
+  padding: 12rem 0;
+}
+
+.detail-title {
+  margin-bottom: 11rem;
+}
+
+.medical-detail .heading-secondary {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.medical-detail .sub-heading {
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 0.2px;
+  padding: 0 10rem;
+}
+
+.medical-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid #a9d6ff;
+  border-radius: 10px;
+  margin: 0 1.5rem;
+}
+
+.card-header {
+  border-top-right-radius: 10px;
+  background-color: #8ec2f2;
+  display: flex;
+  align-items: center;
+  padding: 3rem 3.5rem;
+  gap: 1.5rem;
+}
+
+.card-heading {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.card-body {
+  padding: 3rem 3.5rem;
+}
+
+.card-lists {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.more-link:link,
+.more-link:visited {
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #23a6f0;
+  font-weight: 700;
+}
+
+.card-list-item {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #737373;
+  font-weight: 500;
 }
 
 /*

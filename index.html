@@ -22,83 +22,156 @@
     ></script>
   </head>
   <body>
-    <div class="main-container">
-      <!-- header-section -->
-      <header class="section-header">
-        <nav class="main-nav">
-          <h3 class="text-logo">Physionic</h3>
-          <ul class="nav-list">
-            <li><a class="nav-item" href="#">Home</a></li>
-            <li><a href="#" class="nav-item">Product</a></li>
-            <li><a href="#" class="nav-item">Pricing</a></li>
-            <li><a href="#" class="nav-item">Contact</a></li>
-            <li id="nav-btn">
-              <a class="nav-item nav-cta" href="#"
-                >Get Quote Now &ThinSpace; &rightarrow;
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+    <main>
+      <div class="header-container">
+        <!-- header-section -->
+        <header class="section-header">
+          <nav class="main-nav">
+            <h3 class="text-logo">Physionic</h3>
+            <ul class="nav-list">
+              <li><a class="nav-item" href="#">Home</a></li>
+              <li><a href="#" class="nav-item">Product</a></li>
+              <li><a href="#" class="nav-item">Pricing</a></li>
+              <li><a href="#" class="nav-item">Contact</a></li>
+              <li id="nav-btn">
+                <a class="nav-item nav-cta" href="#"
+                  >Get Quote Now &ThinSpace; &rightarrow;
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-      <!-- Hero-section -->
-      <section class="section-hero container">
-        <div class="hero-left-side">
-          <h1 class="heading-primary">Meet the Best Hospital</h1>
-          <p class="sub-heading">
-            We know how large objects will act, but things on a small scale.
-          </p>
-          <div class="hero-btn-block">
-            <a href="#" class="btn btn-fill">Get Quote Now</a>
-            <a href="#" class="btn btn-outline">Learn More</a>
+        <!-- Hero-section -->
+        <section class="section-hero container">
+          <div class="hero-left-side">
+            <h1 class="heading-primary">Meet the Best Hospital</h1>
+            <p class="sub-heading">
+              We know how large objects will act, but things on a small scale.
+            </p>
+            <div class="hero-btn-block">
+              <a href="#" class="btn btn-fill">Get Quote Now</a>
+              <a href="#" class="btn btn-outline">Learn More</a>
+            </div>
           </div>
+          <div class="hero-right-side">
+            <div class="book-appointment-form">
+              <h3 class="heading-secondary">Book Appointment</h3>
+              <form action="" class="form-block">
+                <div class="name-field">
+                  <label for="name">Name &ast;</label>
+                  <input
+                    id="Name"
+                    type="text"
+                    placeholder="Full Name &ast;"
+                    required
+                  />
+                </div>
+
+                <div class="email-field">
+                  <label for="email">Email address &ast;</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="example@gmail.com &ast;"
+                    required
+                  />
+                </div>
+
+                <div class="Department-field">
+                  <label for="department">Department &ast;</label>
+                  <select name="" id="department" required>
+                    <option value="" selected>Pleae Select</option>
+                    <option value="">physiotherapy</option>
+                    <option value="">physiology</option>
+                  </select>
+                </div>
+
+                <div class="time-field">
+                  <label for="time">Time &ast;</label>
+                  <select name="" id="time" required>
+                    <option value="" selected>4:00 Available</option>
+                    <option value="">5:30 Available</option>
+                    <option value="">6:30 Available</option>
+                  </select>
+                </div>
+                <button class="btn btn-form-submit">Book Appointment</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="medical-detail container">
+        <div class="detail-title">
+          <h2 class="heading-secondary">Leading Medicine</h2>
+          <p class="sub-heading">
+            Problems trying to resolve the conflict between <br />the two major
+            realms of Classical physics: Newtonian mechanics
+          </p>
         </div>
-        <div class="hero-right-side">
-          <div class="book-appointment-form">
-            <h3 class="heading-secondary">Book Appointment</h3>
-            <form action="" class="form-block">
-              <div class="name-field">
-                <label for="name">Name &ast;</label>
-                <input
-                  id="Name"
-                  type="text"
-                  placeholder="Full Name &ast;"
-                  required
-                />
-              </div>
+        <div class="medical-cards">
+          <!-- card-1 -->
+          <div class="card">
+            <header class="card-header">
+              <img src="./img/circle-md.png" alt="" width="60" height="60" />
+              <h5 class="card-heading">Emergency Case</h5>
+            </header>
+            <div class="card-body">
+              <ul class="card-lists">
+                <li class="card-list-item">
+                  - The best products start with Figma
+                </li>
+                <li class="card-list-item">- Design with real data</li>
+                <li class="card-list-item">- Lightning fast prototyping</li>
+                <li class="card-list-item">- Fastest way to organize</li>
+                <li class="card-list-item">- Work at the speed of thought.</li>
+              </ul>
+              <a class="more-link" href="#">Learn More</a>
+            </div>
+          </div>
 
-              <div class="email-field">
-                <label for="email">Email address &ast;</label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="example@gmail.com &ast;"
-                  required
-                />
-              </div>
+          <!-- card-2 -->
 
-              <div class="Department-field">
-                <label for="department">Department &ast;</label>
-                <select name="" id="department" required>
-                  <option value="" selected>Pleae Select</option>
-                  <option value="">physiotherapy</option>
-                  <option value="">physiology</option>
-                </select>
-              </div>
+          <div class="card">
+            <header class="card-header">
+              <img src="./img/circle-md.png" alt="" width="60" height="60" />
+              <p class="card-heading">Cancer Care</p>
+            </header>
+            <div class="card-body">
+              <ul class="card-lists">
+                <li class="card-list-item">
+                  - The best products start with Figma
+                </li>
+                <li class="card-list-item">- Design with real data</li>
+                <li class="card-list-item">- Lightning fast prototyping</li>
+                <li class="card-list-item">- Fastest way to organize</li>
+                <li class="card-list-item">- Work at the speed of thought.</li>
+              </ul>
+              <a class="more-link" href="#">Learn More</a>
+            </div>
+          </div>
+          <!-- card-3 -->
 
-              <div class="time-field">
-                <label for="time">Time &ast;</label>
-                <select name="" id="time" required>
-                  <option value="" selected>4:00 Available</option>
-                  <option value="">5:30 Available</option>
-                  <option value="">6:30 Available</option>
-                </select>
-              </div>
-              <button class="btn btn-form-submit">Book Appointment</button>
-            </form>
+          <div class="card">
+            <header class="card-header">
+              <img src="./img/circle-md.png" alt="" width="60" height="60" />
+              <p class="card-heading">Health Queries</p>
+            </header>
+            <div class="card-body">
+              <ul class="card-lists">
+                <li class="card-list-item">
+                  - The best products start with Figma
+                </li>
+                <li class="card-list-item">- Design with real data</li>
+                <li class="card-list-item">- Lightning fast prototyping</li>
+                <li class="card-list-item">- Fastest way to organize</li>
+                <li class="card-list-item">- Work at the speed of thought.</li>
+              </ul>
+              <a class="more-link" href="#">Learn More</a>
+            </div>
           </div>
         </div>
       </section>
-    </div>
+    </main>
   </body>
 </html>

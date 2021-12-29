@@ -1,6 +1,7 @@
 # physionic-App
 
-###About
+#About
+
 Physionic is Doctor appointment booking landing page
 
 

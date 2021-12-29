@@ -1,5 +1,7 @@
 /* globel reset */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -49,6 +51,26 @@ body {
   text-decoration: none;
   background-color: #23a6f0;
   color: #fff;
+}
+
+.description-block {
+  margin-bottom: 11rem;
+}
+
+.description-title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.title-subheading {
+  color: #737373;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  padding: 0 10rem;
 }
 
 /* Header section */
@@ -205,15 +227,6 @@ body {
   padding: 12rem 0;
 }
 
-.detail-title {
-  margin-bottom: 11rem;
-}
-
-.medical-detail .heading-secondary {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-}
-
 .medical-detail .sub-heading {
   text-align: center;
   font-size: 1.4rem;
@@ -275,6 +288,85 @@ body {
   line-height: 1.5;
   color: #737373;
   font-weight: 500;
+}
+
+/* testimonial-section */
+
+.second-content-section {
+  background-color: #fafafa;
+}
+
+.section-testimonials {
+  padding: 12rem 0;
+}
+
+.testimonils {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5rem;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+  color: #737373;
+  padding: 3rem 3.5rem;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin: 0 1.5rem;
+  gap: 2rem;
+}
+
+.testimonial-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+/* FAQ-section */
+
+.section-faq {
+  padding: 8rem 0;
+}
+
+.faqs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.faq-card {
+  display: flex;
+  border: 1px solid #a9d6ff;
+  border-radius: 5px;
+  padding: 2.5rem 2.8rem;
+  background-color: #fff;
+}
+
+.faq-icon {
+  padding-right: 2rem;
+}
+
+.faq-icon img {
+  height: 1.6rem;
+  width: 0.8rem;
+}
+
+.faq-qna p {
+  color: #737373;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.faq-question {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
 
 /*

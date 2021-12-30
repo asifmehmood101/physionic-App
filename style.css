@@ -4,7 +4,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 :root {
@@ -17,6 +17,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #252b42;
+  box-sizing: border-box;
 }
 
 /* utilites classes */
@@ -47,6 +48,8 @@ body {
 .btn,
 .btn:link,
 .btn:visited {
+  border: none;
+  font-size: 1.6rem;
   display: inline-block;
   text-decoration: none;
   background-color: #23a6f0;
@@ -223,11 +226,11 @@ body {
 }
 
 /* Medical-secion */
-.medical-detail {
+.medical-detail-section {
   padding: 12rem 0;
 }
 
-.medical-detail .sub-heading {
+.medical-detail-section .sub-heading {
   text-align: center;
   font-size: 1.4rem;
   letter-spacing: 0.2px;
@@ -367,6 +370,170 @@ body {
   font-weight: 700;
   line-height: 1.5;
   margin-bottom: 0.5rem;
+}
+
+/* pricing-section */
+
+.section-pricing {
+  padding: 11rem 3.2rem;
+}
+
+.section-pricing .description-block {
+  margin-bottom: 8rem;
+}
+
+.pricing-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+}
+
+.pricing-card {
+  padding: 5rem 4rem;
+  border: 1px solid #23a6f0;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  transform: translateY(2rem);
+}
+
+.pricing-card:nth-child(2) {
+  background-color: #252b42;
+  color: #fff;
+  transform: translateY(-1rem);
+}
+
+.pricing-card:nth-child(2) .price-card-subtitle {
+  color: #fff;
+}
+
+.pricing-card:not(:nth-child(2)):hover {
+  transform: translateY(0);
+}
+
+.price-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.price-card-body p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.price-card-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.price-card-subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #737373;
+  padding: 0 2.5rem;
+  text-align: center;
+}
+
+.monthly-price {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #23a6f0;
+}
+
+.price-span {
+  position: relative;
+  color: #8ec2f2;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.price-span::before {
+  position: absolute;
+  content: "$";
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #23a6f0;
+}
+
+.price-card-body {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.8rem;
+  margin-bottom: 3.5rem;
+}
+
+.include-active,
+.include-inactive {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.include-inactive {
+  filter: grayscale(1);
+}
+
+.plan-list {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.pricing-btn {
+  padding: 1.5rem 8rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* section-cta */
+.section-cta {
+  background-color: #252b42;
+}
+
+.cta-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20rem;
+  color: #fff;
+  padding: 8rem 0;
+}
+
+.cta-heading {
+  text-transform: capitalize;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-subheading {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.cta-right-side {
+  display: flex;
+  align-items: center;
+}
+
+.cta-right-side input {
+  width: 100%;
+  border: none;
+  /*top|right|bottom|left*/
+  padding: 1.6rem 0 1.6rem 2.2rem;
+  border-radius: 5px 0 0 5px;
+}
+
+.cta-btn {
+  display: block;
+  border-radius: 0px 5px 5px 0px;
+  padding: 1.5rem 2.2rem;
 }
 
 /*

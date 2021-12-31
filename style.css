@@ -48,12 +48,19 @@ body {
 .btn,
 .btn:link,
 .btn:visited {
+  cursor: pointer;
   border: none;
   font-size: 1.6rem;
   display: inline-block;
   text-decoration: none;
   background-color: #23a6f0;
   color: #fff;
+  transition: all 0.5s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #1b82be;
 }
 
 .description-block {
@@ -104,7 +111,7 @@ body {
 }
 
 .text-logo {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: 0.1px;
   color: #fff;
@@ -113,6 +120,7 @@ body {
 .nav-list {
   list-style: none;
   display: flex;
+  align-items: center;
   flex-grow: 1;
   gap: 2rem;
 }
@@ -523,17 +531,91 @@ body {
 }
 
 .cta-right-side input {
-  width: 100%;
+  width: 70%;
   border: none;
   /*top|right|bottom|left*/
-  padding: 1.6rem 0 1.6rem 2.2rem;
+  padding: 1.8rem 0 1.8rem 2.4rem;
   border-radius: 5px 0 0 5px;
 }
 
 .cta-btn {
   display: block;
   border-radius: 0px 5px 5px 0px;
-  padding: 1.5rem 2.2rem;
+  padding: 1.65rem 2.4rem;
+}
+
+/* footer-section */
+
+.section-footer {
+  padding: 8rem 0;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+}
+
+.social-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.footer-heading-1 {
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.footer-heading {
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.footer-subheading {
+  color: #737373;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding-right: 2.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2rem;
+  color: #23a6f0;
+}
+
+.social-icon {
+  cursor: pointer;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+
+.social-link a {
+  text-decoration: none;
+  color: #737373;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.create-by {
+  background-color: #f1f0f0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+
+  /* top | right | bottom | left */
+  padding: 2.5rem 0 2.5rem 0;
 }
 
 /*

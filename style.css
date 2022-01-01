@@ -104,7 +104,7 @@ body {
 }
 
 .main-nav {
-  padding: 3.4rem 13.6rem;
+  padding: 3.4rem 5rem;
   display: flex;
   align-items: center;
   gap: 10rem;
@@ -494,6 +494,7 @@ body {
 }
 
 .pricing-btn {
+  margin: 0 1.5rem;
   padding: 1.5rem 8rem;
   border-radius: 5px;
   font-size: 1.4rem;
@@ -616,6 +617,157 @@ body {
 
   /* top | right | bottom | left */
   padding: 2.5rem 0 2.5rem 0;
+}
+
+/* Below 1000px (smaller deslktop) <= 1000px  */
+
+@media (max-width: 1200px) {
+  :root {
+    font-size: 60%;
+  }
+
+  .heading-primary {
+    font-size: 5rem;
+  }
+  .sub-heading {
+    font-size: 1.8rem;
+  }
+
+  .title-subheading {
+    font-size: 1.6rem;
+  }
+
+  .cta-subheading {
+    font-size: 1rem;
+  }
+
+  .section-testimonials,
+  .section-faq,
+  .cta-container,
+  .section-footer,
+  .section-hero,
+  .section-pricing,
+  .medical-detail-section {
+    padding: 6rem 2.4rem;
+  }
+}
+@media (max-width: 1050px) {
+  :root {
+    font-size: 55%;
+  }
+
+  .sub-heading {
+    font-size: 1.6rem;
+  }
+
+  .cta-subheading {
+    font-size: 1rem;
+  }
+  .title-subheading {
+    font-size: 1.6rem;
+  }
+  .create-by {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-left-side {
+    justify-self: center;
+  }
+
+  .cta-right-side input {
+    width: 50%;
+  }
+  .hero-left-side .heading-primary {
+    font-size: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  .sub-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-btn-block {
+    text-align: center;
+  }
+
+  .btn-fill:link,
+  .btn-fill:visited,
+  .btn-outline:link,
+  .btn-outline:visited {
+    padding: 2.2rem 3.8rem;
+    font-size: 1.6rem;
+  }
+
+  .hero-right-side {
+    justify-self: center;
+  }
+  .title-subheading {
+    font-size: 1.6rem;
+  }
+
+  .medical-cards,
+  .testimonils {
+    gap: 0;
+  }
+
+  .faqs {
+    gap: 1.5rem;
+  }
+
+  .card-body {
+    padding: 2rem 2.5rem;
+  }
+
+  .card-header {
+    padding: 2rem 2rem;
+  }
+
+  .card-heading {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  .pricing-card {
+    padding: 2.5rem 1rem;
+  }
+
+  .pricing-btn {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .cta-container {
+    grid-template-columns: 1fr;
+    padding-left: 6.4rem;
+    padding-right: 6.4rem;
+    gap: 4rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem 2.5rem;
+  }
+
+  .faq-card {
+    padding: 2.2rem 2rem;
+  }
+
+  .cta-subheading {
+    font-size: 1.6rem;
+  }
+
+  .cta-left-side {
+    text-align: center;
+  }
+
+  .cta-right-side {
+    justify-content: center;
+  }
 }
 
 /*

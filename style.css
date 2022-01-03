@@ -10,6 +10,7 @@
 :root {
   /* 10/16 *100 = 62.5% */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   font-weight: 400;
   color: #252b42;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* utilites classes */
@@ -83,6 +85,13 @@ body {
   padding: 0 10rem;
 }
 
+.menu-icon {
+  display: none;
+  color: #fff;
+  width: 4rem;
+  height: 4rem;
+}
+
 /* Header section */
 
 .header-container {
@@ -101,6 +110,7 @@ body {
 .section-header {
   max-width: 132.2rem;
   margin: 0 auto;
+  position: relative;
 }
 
 .main-nav {
@@ -125,6 +135,10 @@ body {
   gap: 2rem;
 }
 
+.menu-icon {
+  display: none;
+}
+
 .nav-item:link,
 .nav-item:visited {
   text-align: center;
@@ -142,6 +156,10 @@ body {
 
 #nav-btn {
   margin-left: auto;
+}
+
+.btn-nav {
+  display: none;
 }
 
 /* hero-section */
@@ -495,7 +513,7 @@ body {
 
 .pricing-btn {
   margin: 0 1.5rem;
-  padding: 1.5rem 8rem;
+  padding: 1.5rem 4rem;
   border-radius: 5px;
   font-size: 1.4rem;
   font-weight: 700;
@@ -767,6 +785,212 @@ body {
 
   .cta-right-side {
     justify-content: center;
+  }
+}
+
+@media (max-width: 740px) {
+  .main-nav {
+    justify-content: space-between;
+  }
+
+  .btn-nav {
+    background-color: transparent;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    font-size: 3rem;
+    gap: 3rem;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.5s;
+    transform: translateX(100%);
+  }
+
+  .menu-icon[name="menu-outline"] {
+    display: block;
+  }
+
+  .menu-icon[name="close-outline"] {
+    display: none;
+  }
+
+  .open-nav .menu-icon[name="close-outline"] {
+    display: block;
+  }
+
+  .open-nav .menu-icon[name="menu-outline"] {
+    display: none;
+  }
+
+  .open-nav .nav-list {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-item:link,
+  .nav-item:visited {
+    color: #737373;
+    font-size: 3rem;
+  }
+
+  #nav-btn {
+    display: none;
+  }
+
+  .hero-left-side .heading-primary {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .sub-heading {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .medical-cards,
+  .testimonils {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .card,
+  .testimonial-card {
+    margin: 0;
+  }
+
+  .faqs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .pricing-details {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .pricing-card {
+    justify-self: center;
+    grid-column: 1/-1;
+  }
+
+  .section-footer {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+
+  .title-subheading {
+    padding: 0 6.4rem;
+  }
+
+  .pricing-card:nth-child(2) {
+    transform: translateY(0);
+  }
+
+  .btn-fill:link,
+  .btn-fill:visited,
+  .btn-outline:link,
+  .btn-outline:visited {
+    padding: 1.5rem 3.6rem;
+  }
+
+  .cta-subheading {
+    font-size: 1.4rem;
+  }
+  .btn-nav {
+    display: block;
+  }
+}
+
+@media (max-width: 460px) {
+  .main-nav {
+    padding: 3.4rem 3rem;
+  }
+
+  .section-hero {
+    gap: 8rem;
+  }
+
+  .sub-heading {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 4rem;
+  }
+
+  .btn-fill:link,
+  .btn-fill:visited {
+    margin-right: 0;
+  }
+
+  .hero-btn-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .description-title {
+    font-size: 3.5rem;
+  }
+
+  .title-subheading {
+    padding: 0 0;
+    font-size: 1.4rem;
+  }
+
+  .medical-cards,
+  .testimonils,
+  .faqs {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .card,
+  .faq-card {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .card-header {
+    justify-content: space-evenly;
+  }
+
+  .testimonial-card {
+    padding: 3rem 3.5rem;
+  }
+
+  .pricing-card {
+    padding: 5rem 4rem;
+  }
+
+  .cta-subheading {
+    display: none;
+  }
+
+  .cta-right-side input {
+    width: 100%;
+  }
+
+  .hero-left-side .heading-primary {
+    text-align: center;
   }
 }
 

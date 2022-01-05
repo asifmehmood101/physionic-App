@@ -1,13 +1,16 @@
 /* globel reset */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 :root {
   /* 10/16 *100 = 62.5% */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -15,6 +18,8 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #252b42;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* utilites classes */
@@ -45,10 +50,46 @@ body {
 .btn,
 .btn:link,
 .btn:visited {
+  cursor: pointer;
+  border: none;
+  font-size: 1.6rem;
   display: inline-block;
   text-decoration: none;
   background-color: #23a6f0;
   color: #fff;
+  transition: all 0.5s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #1b82be;
+}
+
+.description-block {
+  margin-bottom: 11rem;
+}
+
+.description-title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.title-subheading {
+  color: #737373;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  padding: 0 10rem;
+}
+
+.menu-icon {
+  display: none;
+  color: #fff;
+  width: 4rem;
+  height: 4rem;
 }
 
 /* Header section */
@@ -69,17 +110,18 @@ body {
 .section-header {
   max-width: 132.2rem;
   margin: 0 auto;
+  position: relative;
 }
 
 .main-nav {
-  padding: 3.4rem 13.6rem;
+  padding: 3.4rem 5rem;
   display: flex;
   align-items: center;
   gap: 10rem;
 }
 
 .text-logo {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: 0.1px;
   color: #fff;
@@ -88,8 +130,13 @@ body {
 .nav-list {
   list-style: none;
   display: flex;
+  align-items: center;
   flex-grow: 1;
   gap: 2rem;
+}
+
+.menu-icon {
+  display: none;
 }
 
 .nav-item:link,
@@ -109,6 +156,10 @@ body {
 
 #nav-btn {
   margin-left: auto;
+}
+
+.btn-nav {
+  display: none;
 }
 
 /* hero-section */
@@ -201,20 +252,11 @@ body {
 }
 
 /* Medical-secion */
-.medical-detail {
+.medical-detail-section {
   padding: 12rem 0;
 }
 
-.detail-title {
-  margin-bottom: 11rem;
-}
-
-.medical-detail .heading-secondary {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-}
-
-.medical-detail .sub-heading {
+.medical-detail-section .sub-heading {
   text-align: center;
   font-size: 1.4rem;
   letter-spacing: 0.2px;
@@ -275,6 +317,681 @@ body {
   line-height: 1.5;
   color: #737373;
   font-weight: 500;
+}
+
+/* testimonial-section */
+
+.second-content-section {
+  background-color: #fafafa;
+}
+
+.section-testimonials {
+  padding: 12rem 0;
+}
+
+.testimonils {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5rem;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+  color: #737373;
+  padding: 3rem 3.5rem;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin: 0 1.5rem;
+  gap: 2rem;
+}
+
+.testimonial-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+/* FAQ-section */
+
+.section-faq {
+  padding: 8rem 0;
+}
+
+.faqs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.faq-card {
+  display: flex;
+  border: 1px solid #a9d6ff;
+  border-radius: 5px;
+  padding: 2.5rem 2.8rem;
+  background-color: #fff;
+}
+
+.faq-icon {
+  padding-right: 2rem;
+}
+
+.faq-icon img {
+  height: 1.6rem;
+  width: 0.8rem;
+}
+
+.faq-qna p {
+  color: #737373;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.faq-question {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+/* pricing-section */
+
+.section-pricing {
+  padding: 11rem 3.2rem;
+}
+
+.section-pricing .description-block {
+  margin-bottom: 8rem;
+}
+
+.pricing-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+}
+
+.pricing-card {
+  padding: 5rem 4rem;
+  border: 1px solid #23a6f0;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  transform: translateY(2rem);
+}
+
+.pricing-card:nth-child(2) {
+  background-color: #252b42;
+  color: #fff;
+  transform: translateY(-1rem);
+}
+
+.pricing-card:nth-child(2) .price-card-subtitle {
+  color: #fff;
+}
+
+.pricing-card:not(:nth-child(2)):hover {
+  transform: translateY(0);
+}
+
+.price-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.price-card-body p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.price-card-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.price-card-subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #737373;
+  padding: 0 2.5rem;
+  text-align: center;
+}
+
+.monthly-price {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #23a6f0;
+}
+
+.price-span {
+  position: relative;
+  color: #8ec2f2;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.price-span::before {
+  position: absolute;
+  content: "$";
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #23a6f0;
+}
+
+.price-card-body {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.8rem;
+  margin-bottom: 3.5rem;
+}
+
+.include-active,
+.include-inactive {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.include-inactive {
+  filter: grayscale(1);
+}
+
+.plan-list {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.pricing-btn {
+  margin: 0 1.5rem;
+  padding: 1.5rem 4rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* section-cta */
+.section-cta {
+  background-color: #252b42;
+}
+
+.cta-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20rem;
+  color: #fff;
+  padding: 8rem 0;
+}
+
+.cta-heading {
+  text-transform: capitalize;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-subheading {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.cta-right-side {
+  display: flex;
+  align-items: center;
+}
+
+.cta-right-side input {
+  width: 70%;
+  border: none;
+  /*top|right|bottom|left*/
+  padding: 1.8rem 0 1.8rem 2.4rem;
+  border-radius: 5px 0 0 5px;
+}
+
+.cta-btn {
+  display: block;
+  border-radius: 0px 5px 5px 0px;
+  padding: 1.65rem 2.4rem;
+}
+
+/* footer-section */
+
+.section-footer {
+  padding: 8rem 0;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+}
+
+.social-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.footer-heading-1 {
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.footer-heading {
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.footer-subheading {
+  color: #737373;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding-right: 2.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2rem;
+  color: #23a6f0;
+}
+
+.social-icon {
+  cursor: pointer;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+
+.social-link a {
+  text-decoration: none;
+  color: #737373;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.create-by {
+  background-color: #f1f0f0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+
+  /* top | right | bottom | left */
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+/* Below 1000px (smaller deslktop) <= 1000px  */
+
+@media (max-width: 1200px) {
+  :root {
+    font-size: 60%;
+  }
+
+  .heading-primary {
+    font-size: 5rem;
+  }
+  .sub-heading {
+    font-size: 1.8rem;
+  }
+
+  .title-subheading {
+    font-size: 1.6rem;
+  }
+
+  .cta-subheading {
+    font-size: 1rem;
+  }
+
+  .section-testimonials,
+  .section-faq,
+  .cta-container,
+  .section-footer,
+  .section-hero,
+  .section-pricing,
+  .medical-detail-section {
+    padding: 6rem 2.4rem;
+  }
+}
+@media (max-width: 1050px) {
+  :root {
+    font-size: 55%;
+  }
+
+  .sub-heading {
+    font-size: 1.6rem;
+  }
+
+  .cta-subheading {
+    font-size: 1rem;
+  }
+  .title-subheading {
+    font-size: 1.6rem;
+  }
+  .create-by {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-left-side {
+    justify-self: center;
+  }
+
+  .cta-right-side input {
+    width: 50%;
+  }
+  .hero-left-side .heading-primary {
+    font-size: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  .sub-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-btn-block {
+    text-align: center;
+  }
+
+  .btn-fill:link,
+  .btn-fill:visited,
+  .btn-outline:link,
+  .btn-outline:visited {
+    padding: 2.2rem 3.8rem;
+    font-size: 1.6rem;
+  }
+
+  .hero-right-side {
+    justify-self: center;
+  }
+  .title-subheading {
+    font-size: 1.6rem;
+  }
+
+  .medical-cards,
+  .testimonils {
+    gap: 0;
+  }
+
+  .faqs {
+    gap: 1.5rem;
+  }
+
+  .card-body {
+    padding: 2rem 2.5rem;
+  }
+
+  .card-header {
+    padding: 2rem 2rem;
+  }
+
+  .card-heading {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  .pricing-card {
+    padding: 2.5rem 1rem;
+  }
+
+  .pricing-btn {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .cta-container {
+    grid-template-columns: 1fr;
+    padding-left: 6.4rem;
+    padding-right: 6.4rem;
+    gap: 4rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem 2.5rem;
+  }
+
+  .faq-card {
+    padding: 2.2rem 2rem;
+  }
+
+  .cta-subheading {
+    font-size: 1.6rem;
+  }
+
+  .cta-left-side {
+    text-align: center;
+  }
+
+  .cta-right-side {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 740px) {
+  .main-nav {
+    justify-content: space-between;
+  }
+
+  .btn-nav {
+    background-color: transparent;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    font-size: 3rem;
+    gap: 3rem;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.5s;
+    transform: translateX(100%);
+  }
+
+  .menu-icon[name="menu-outline"] {
+    display: block;
+  }
+
+  .menu-icon[name="close-outline"] {
+    display: none;
+  }
+
+  .open-nav .menu-icon[name="close-outline"] {
+    display: block;
+  }
+
+  .open-nav .menu-icon[name="menu-outline"] {
+    display: none;
+  }
+
+  .open-nav .nav-list {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-item:link,
+  .nav-item:visited {
+    color: #737373;
+    font-size: 3rem;
+  }
+
+  #nav-btn {
+    display: none;
+  }
+
+  .hero-left-side .heading-primary {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .sub-heading {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .medical-cards,
+  .testimonils {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .card,
+  .testimonial-card {
+    margin: 0;
+  }
+
+  .faqs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .pricing-details {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .pricing-card {
+    justify-self: center;
+    grid-column: 1/-1;
+  }
+
+  .section-footer {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
+
+  .title-subheading {
+    padding: 0 6.4rem;
+  }
+
+  .pricing-card:nth-child(2) {
+    transform: translateY(0);
+  }
+
+  .btn-fill:link,
+  .btn-fill:visited,
+  .btn-outline:link,
+  .btn-outline:visited {
+    padding: 1.5rem 3.6rem;
+  }
+
+  .cta-subheading {
+    font-size: 1.4rem;
+  }
+  .btn-nav {
+    display: block;
+  }
+}
+
+@media (max-width: 460px) {
+  .main-nav {
+    padding: 3.4rem 3rem;
+  }
+
+  .section-hero {
+    gap: 8rem;
+  }
+
+  .sub-heading {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 4rem;
+  }
+
+  .btn-fill:link,
+  .btn-fill:visited {
+    margin-right: 0;
+  }
+
+  .hero-btn-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .description-title {
+    font-size: 3.5rem;
+  }
+
+  .title-subheading {
+    padding: 0 0;
+    font-size: 1.4rem;
+  }
+
+  .medical-cards,
+  .testimonils,
+  .faqs {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .card,
+  .faq-card {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .card-header {
+    justify-content: space-evenly;
+  }
+
+  .testimonial-card {
+    padding: 3rem 3.5rem;
+  }
+
+  .pricing-card {
+    padding: 5rem 4rem;
+  }
+
+  .cta-subheading {
+    display: none;
+  }
+
+  .cta-right-side input {
+    width: 100%;
+  }
+
+  .hero-left-side .heading-primary {
+    text-align: center;
+  }
 }
 
 /*
